@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: configure
-      run: ./configure
+      run: sudo apt update && sudo apt install -y libgmp-dev libmpc-dev libmpfr-dev && ./configure
     - name: make
       run: make
     - name: make check
